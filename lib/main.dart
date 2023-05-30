@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const PeoplesTech());
@@ -9,6 +10,8 @@ class PeoplesTech extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const GetMaterialApp(
+      home: Scaffold(),
+    );
   }
 }
