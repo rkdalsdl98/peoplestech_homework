@@ -11,6 +11,7 @@ class PreviewItem extends StatelessWidget {
   final String itemName;
   final String imageUrlHuge;
   final int price;
+  final String category;
   final numFormat = NumberFormat.currency(locale: 'ko_KR', symbol: '');
 
   PreviewItem({
@@ -20,6 +21,7 @@ class PreviewItem extends StatelessWidget {
     required this.itemName,
     required this.price,
     required this.imageUrlHuge,
+    required this.category,
   });
 
   Future<void> showDetail(BuildContext context) async {
@@ -29,6 +31,7 @@ class PreviewItem extends StatelessWidget {
       company: company,
       itemName: itemName,
       price: price,
+      category: category,
     ));
     if (result == true) {
       ScaffoldMessenger.of(context).showSnackBar(

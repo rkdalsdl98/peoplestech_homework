@@ -10,6 +10,9 @@ import 'package:peoplestech_homework/widget/pointshop/category_icon.dart';
 class PointShopScreen extends StatelessWidget {
   final CategoryController categoryController = Get.put(CategoryController());
   final UserController userController = Get.find<UserController>();
+  final ItemsController itemController = Get.put(ItemsController());
+  final CompanyController companyController = Get.put(CompanyController());
+
   final numFormat = NumberFormat.currency(locale: 'ko_KR', symbol: '');
 
   PointShopScreen({super.key});

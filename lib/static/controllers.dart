@@ -10,6 +10,14 @@ class CompanyController extends GetxController {
       val?.selCompany = company;
     });
   }
+
+  void setCompanys(String category) {
+    companyDatas.update((val) {
+      val!.companys = [
+        ...val.originCompanys.where((e) => e['category'] == category)
+      ];
+    });
+  }
 }
 
 class CategoryController extends GetxController {
@@ -27,6 +35,14 @@ class ItemsController extends GetxController {
         val?.previewItems.sort((a, b) => (a.price).compareTo(b.price));
       }
       val?.desc = newDesc;
+    });
+  }
+
+  void setItems(String category) {
+    itemDatas.update((val) {
+      val!.previewItems = [
+        ...val.originItems.where((e) => e.category == category)
+      ];
     });
   }
 }

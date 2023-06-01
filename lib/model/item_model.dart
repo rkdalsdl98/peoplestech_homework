@@ -1,5 +1,5 @@
 class ItemModel {
-  final String company, itemName, imageUrl, imageUrlHuge;
+  final String company, itemName, imageUrl, imageUrlHuge, category;
   final int price;
 
   ItemModel.fromDict(Map<String, dynamic> dict)
@@ -7,5 +7,6 @@ class ItemModel {
         itemName = dict['itemName'],
         imageUrlHuge = dict['imageUrlHuge'],
         imageUrl = dict['imageUrl'],
-        price = dict['price'];
+        price = dict['price'],
+        category = dict['category'];
 }

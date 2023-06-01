@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../screens/pointshop_detail_screen.dart';
+import '../../static/controllers.dart';
 
 class CategoryIcon extends StatelessWidget {
   final String imageUrl;
   final String categoryName;
+  final CompanyController companyController = Get.find<CompanyController>();
+  final ItemsController itemController = Get.find<ItemsController>();
 
-  const CategoryIcon({
+  CategoryIcon({
     super.key,
     required this.imageUrl,
     required this.categoryName,
@@ -17,6 +20,9 @@ class CategoryIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        companyController.setCompanys(categoryName);
+        itemController.setItems(categoryName);
+
         Get.to(PointShopDetailScreen(
           selCategoryName: categoryName,
           categoryImageUrl: imageUrl,

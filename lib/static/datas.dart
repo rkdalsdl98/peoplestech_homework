@@ -55,7 +55,8 @@ class CategoryDatas {
 
 class CompanyDatas {
   String selCompany = '';
-  List<Map<String, dynamic>> companys = [
+
+  List<Map<String, dynamic>> originCompanys = [
     {
       "company": "빽다방",
       "imageUrl": "assets/img/companys/backcoffeshop.png",
@@ -107,12 +108,13 @@ class CompanyDatas {
       "category": "커피/음료"
     },
   ];
+  List<Map<String, dynamic>> companys = [];
 }
 
 class ItemDatas {
   bool desc = false;
 
-  List<ItemModel> previewItems = [
+  List<ItemModel> originItems = [
     ItemModel.fromDict(
       {
         "company": "이디야커피",
@@ -120,6 +122,7 @@ class ItemDatas {
         "imageUrl": "assets/img/items/americano_L_hot.png",
         "imageUrlHuge": "assets/img/items/americano_L_hot_huge.png",
         "price": 2810,
+        "category": "커피/음료"
       },
     ),
     ItemModel.fromDict(
@@ -129,6 +132,7 @@ class ItemDatas {
         "imageUrl": "assets/img/items/americano_T.png",
         "imageUrlHuge": "assets/img/items/americano_T_huge.png",
         "price": 3370,
+        "category": "커피/음료"
       },
     ),
     ItemModel.fromDict(
@@ -138,6 +142,7 @@ class ItemDatas {
         "imageUrl": "assets/img/items/americano_R.png",
         "imageUrlHuge": "assets/img/items/americano_R_huge.png",
         "price": 3960,
+        "category": "커피/음료"
       },
     ),
     ItemModel.fromDict(
@@ -147,6 +152,7 @@ class ItemDatas {
         "imageUrl": "assets/img/items/ediyagiftcard_5000.png",
         "imageUrlHuge": "assets/img/items/ediyagiftcard_5000_huge.png",
         "price": 4400,
+        "category": "커피/음료"
       },
     ),
     ItemModel.fromDict(
@@ -156,6 +162,7 @@ class ItemDatas {
         "imageUrl": "assets/img/items/baskinrobbinstradecard.png",
         "imageUrlHuge": "assets/img/items/baskinrobbinstradecard_huge.png",
         "price": 20680,
+        "category": "커피/음료"
       },
     ),
     ItemModel.fromDict(
@@ -165,9 +172,11 @@ class ItemDatas {
         "imageUrl": "assets/img/items/dominopizzatradecard.png",
         "imageUrlHuge": "assets/img/items/dominopizzatradecard_huge.png",
         "price": 20680,
+        "category": "커피/음료"
       },
     ),
   ];
+  List<ItemModel> previewItems = [];
 }
 
 class UserData {

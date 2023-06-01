@@ -13,6 +13,7 @@ class ProductScreen extends StatelessWidget {
   final String company;
   final String itemName;
   final int price;
+  final String category;
   final numFormat = NumberFormat.currency(locale: 'ko_KR', symbol: '');
   final UserController userController = Get.find<UserController>();
 
@@ -23,6 +24,7 @@ class ProductScreen extends StatelessWidget {
     required this.itemName,
     required this.price,
     required this.imageHugeUrl,
+    required this.category,
   });
 
   void buyItem(BuildContext context) {
@@ -35,6 +37,7 @@ class ProductScreen extends StatelessWidget {
             "company": company,
             "itemName": itemName,
             "price": price,
+            "category": category,
           },
         ));
 

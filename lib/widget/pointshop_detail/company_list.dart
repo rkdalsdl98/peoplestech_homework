@@ -6,7 +6,7 @@ import 'company_category_icon.dart';
 import 'company_icon.dart';
 
 class CompanyList extends StatelessWidget {
-  final CompanyController companyController = Get.put(CompanyController());
+  final CompanyController companyController = Get.find<CompanyController>();
   final String selCategoryName;
   final String categoryImageUrl;
 

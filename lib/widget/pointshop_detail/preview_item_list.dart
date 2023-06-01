@@ -6,7 +6,7 @@ import '../global/sort_button.dart';
 import '../global/preview_item.dart';
 
 class PreviewItemList extends StatelessWidget {
-  final ItemsController itemController = Get.put(ItemsController());
+  final ItemsController itemController = Get.find<ItemsController>();
 
   PreviewItemList({
     super.key,
@@ -58,6 +58,7 @@ class PreviewItemList extends StatelessWidget {
                               company: items[index].company,
                               price: items[index].price,
                               imageUrlHuge: items[index].imageUrlHuge,
+                              category: items[index].category,
                             );
                           },
                           itemCount: items.length,
