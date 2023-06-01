@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: 
   intl: ^0.18.1
+  image_picker: ^0.8.7+5
+  path_provider: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -89,6 +91,12 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+    - assets/img/exclamation.png
+    - assets/img/emptybasket.png
+    - assets/img/success.png
+    - assets/img/point.png
+    - assets/img/message.png
+    - assets/img/calender.png
     - assets/img/character.png
     - assets/img/gift.png
     - assets/img/wallet.png
@@ -106,6 +114,40 @@ flutter:
     - assets/img/movie_camera.png
     - assets/img/guideman.png
     - assets/img/money_face.png
+    - assets/img/categorys/admission_tickets.png
+    - assets/img/categorys/airplane.png
+    - assets/img/categorys/convenience_store.png
+    - assets/img/categorys/doughnut.png
+    - assets/img/categorys/fork_knife_with_plate.png
+    - assets/img/categorys/haircut.png
+    - assets/img/categorys/hamburger.png
+    - assets/img/categorys/ice_coffee.png
+    - assets/img/categorys/icecream.png
+    - assets/img/categorys/mobile_phone.png
+    - assets/img/categorys/popcorn.png
+    - assets/img/categorys/poultry_leg.png
+    - assets/img/companys/angelinus.png
+    - assets/img/companys/backcoffeshop.png
+    - assets/img/companys/coffeebean.png
+    - assets/img/companys/ediyacoffee.png
+    - assets/img/companys/jambajuice.png
+    - assets/img/companys/pascucci.png
+    - assets/img/companys/starbucks.png
+    - assets/img/companys/tomandtoms.png
+    - assets/img/companys/twosomeplace.png
+    - assets/img/companys/paulbassett.png
+    - assets/img/items/americano_L_hot.png
+    - assets/img/items/americano_R.png
+    - assets/img/items/americano_T.png
+    - assets/img/items/americano_T_huge.png
+    - assets/img/items/baskinrobbinstradecard.png
+    - assets/img/items/dominopizzatradecard.png
+    - assets/img/items/ediyagiftcard_5000.png
+    - assets/img/items/baskinrobbinstradecard_huge.png
+    - assets/img/items/americano_L_hot_huge.png
+    - assets/img/items/americano_R_huge.png
+    - assets/img/items/dominopizzatradecard_huge.png
+    - assets/img/items/ediyagiftcard_5000_huge.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

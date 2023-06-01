@@ -3,14 +3,14 @@ import 'package:intl/intl.dart';
 
 import '../../desigh/funcs.dart';
 
-class Item extends StatelessWidget {
+class SampleItem extends StatelessWidget {
   final String assetsImage;
   final String company;
   final String itemName;
   final int price;
   final numFormat = NumberFormat.currency(locale: 'ko_KR', symbol: '');
 
-  Item({
+  SampleItem({
     super.key,
     required this.assetsImage,
     required this.company,

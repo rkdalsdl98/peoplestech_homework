@@ -17,7 +17,7 @@ class PeoplesTech extends StatelessWidget {
           background: Color(0xFFF5F7FF),
         ),
       ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

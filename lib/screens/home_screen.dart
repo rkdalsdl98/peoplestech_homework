@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:peoplestech_homework/static/controllers.dart';
 
 import '../widget/custom_sliver_appbar.dart';
 import '../widget/global/event_box.dart';
@@ -10,7 +12,9 @@ import '../widget/home/user_status_box.dart';
 import '../widget/home/using_guide_box.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final UserController userController = Get.put(UserController());
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.background,
       body: CustomScrollView(
         slivers: [
-          const CustomSliverAppBar(),
+          CustomSliverAppBar(),
           UserStatusBox(),
           const RewardBoxes(),
           MissionBox(

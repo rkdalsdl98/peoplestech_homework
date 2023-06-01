@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:peoplestech_homework/desigh/funcs.dart';
 
+import '../static/controllers.dart';
+
 class CustomSliverAppBar extends StatelessWidget {
-  const CustomSliverAppBar({
+  final UserController userController = Get.find<UserController>();
+  final numFormat = NumberFormat.currency(locale: 'ko_KR', symbol: '');
+
+  CustomSliverAppBar({
     super.key,
   });
 
@@ -28,28 +35,31 @@ class CustomSliverAppBar extends StatelessWidget {
                 size: 16,
               ),
             ),
-            RichText(
-              text: const TextSpan(
-                text: '   1,200 P',
-                style: TextStyle(
-                  color: Color(0xFF2E313D),
-                  fontSize: 14,
-                  fontFamily: 'Pretendard',
-                  fontWeight: FontWeight.bold,
-                ),
-                children: [
-                  TextSpan(
-                    text: ' 모았어요!',
-                    style: TextStyle(
-                      color: Color(0xFF2E313D),
-                      fontSize: 14,
-                      fontFamily: 'Pretendard',
-                      fontWeight: FontWeight.w400,
-                    ),
+            GetX<UserController>(builder: (controller) {
+              return RichText(
+                text: TextSpan(
+                  text:
+                      '   ${numFormat.format(controller.userData().wallet)} P',
+                  style: const TextStyle(
+                    color: Color(0xFF2E313D),
+                    fontSize: 14,
+                    fontFamily: 'Pretendard',
+                    fontWeight: FontWeight.bold,
                   ),
-                ],
-              ),
-            ),
+                  children: const [
+                    TextSpan(
+                      text: ' 모았어요!',
+                      style: TextStyle(
+                        color: Color(0xFF2E313D),
+                        fontSize: 14,
+                        fontFamily: 'Pretendard',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }),
             IconButton(
               onPressed: () {},
               icon: const Icon(

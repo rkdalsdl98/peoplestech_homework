@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:peoplestech_homework/screens/pointshop_screen.dart';
 
 import '../../desigh/funcs.dart';
-import '../global/item.dart';
+import '../global/sample_item.dart';
 
 class PointshopBox extends StatelessWidget {
   const PointshopBox({
@@ -89,7 +89,7 @@ class PointshopBox extends StatelessWidget {
                     ],
                   ),
                 ),
-                Item(
+                SampleItem(
                   assetsImage: 'assets/img/americano.png',
                   company: '빽다방',
                   itemName: '앗메리카노(ICED)',
@@ -98,7 +98,7 @@ class PointshopBox extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Item(
+                SampleItem(
                   assetsImage: 'assets/img/shinramen.png',
                   company: 'GS25',
                   itemName: '농심)신라면(봉지)',
@@ -107,7 +107,7 @@ class PointshopBox extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Item(
+                SampleItem(
                   assetsImage: 'assets/img/navergiftcard.png',
                   company: '네이버페이 포인트쿠폰',
                   itemName: '네이버페이 포인트 1,000원',
@@ -115,7 +115,7 @@ class PointshopBox extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.to(const PointShopScreen());
+                    Get.to(PointShopScreen());
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 30),
