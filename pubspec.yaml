@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: 
   intl: ^0.18.1
-  image_picker: ^0.8.7+5
   path_provider: ^2.0.15
 
 dev_dependencies:
